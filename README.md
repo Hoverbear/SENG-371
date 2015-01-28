@@ -1,7 +1,7 @@
 # SENG-371
-What is the relation between software development methodologies, and development time of a software system?
+What is the relation between software development methodologies, and development time per feature (ie. patches) release in a software system?
 
-The user would have to manually input the project schedule, or if there's already a schedule in a different software then use that as the input. From the schedule we could either try and determine the methodology, or have the user input it as well. The user should also post their approximate due date for the elements in the schedule. Then over time, take the element completion time(end day-start day)/estimated completion time(planned end day-start day) ratios for each element in the project, and visualize it.
+To find the development time per feature, we would use previously existing version tracking software to find the initial commits, to the final commit before patch release, or when its ready for testing. So using an average of common features used in software systems, we could find the approximate due date for each of the features. From here, we can take the element completion time(end day-start day)/estimated completion time(planned end day-start day) ratios for each element in the project, and visualize it.
 
 Codebases/Systems:<br>
 Titan	https://github.com/thinkaurelius/titan<br>
