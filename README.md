@@ -8,7 +8,7 @@ Titan	https://github.com/thinkaurelius/titan<br>
 Godot	https://github.com/okamstudio/godot<br>
 Linux	https://github.com/torvalds/linux<br>
 Metrics:
-SonarQube https://github.com/SonarSource/sonarqube
+SonarQube https://github.com/SonarSource/sonarqube<br>
 Firefox could also be an option, as it uses an agile open source development methodology.
 
 <b>Metrics</b>:<br>
