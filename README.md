@@ -7,7 +7,6 @@ To find the development time per feature, we would use previously existing versi
 Titan	https://github.com/thinkaurelius/titan<br>
 Godot	https://github.com/okamstudio/godot<br>
 Linux	https://github.com/torvalds/linux<br>
-<b>Metrics</b>:<br>
 SonarQube https://github.com/SonarSource/sonarqube<br>
 Firefox could also be an option, as it uses an agile open source development methodology.
 
