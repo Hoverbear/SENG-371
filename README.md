@@ -3,10 +3,16 @@ What is the relation between software development methodologies, and development
 
 To find the development time per feature, we would use previously existing version tracking software to find the initial commits, to the final commit before patch release, or when its ready for testing. So using an average of common features used in software systems, we could find the approximate due date for each of the features. From here, we can take the element completion time(end day-start day)/estimated completion time(planned end day-start day) ratios for each element in the project, and visualize it.
 
-<b>Codebases/Systems</b>:<br>
+<b>Codebases/Systems/Metrics</b>:<br>
 Titan	https://github.com/thinkaurelius/titan<br>
 Godot	https://github.com/okamstudio/godot<br>
 Linux	https://github.com/torvalds/linux<br>
+Metrics:
+SonarQube https://github.com/SonarSource/sonarqube
+Firefox could also be an option, as it uses an agile open source development methodology.
+
+<b>Metrics</b>:<br>
+
 
 <b>Project milestones</b>:<br>
 Data collection should be completed by February 7<br>
