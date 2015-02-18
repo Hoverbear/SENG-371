@@ -1,7 +1,8 @@
 # SENG-371
+The following is a SENG 371 project being developed by <b>Mitchell Rivett</b> and <b>Tyler Potter</b>.
 
 ## Project Question
-What is the relation between software development methodologies, and development time per feature (ie. patches) release in a software system?
+What is the relation between software development methodologies and development time per feature in a software system?
 
 ## Methodology
 We will gather the information from the issue tracking software used by the selected codebases' (Jira and Github) by creating a Python script. For Jira issue tracking we will use JiraPython, and for Gitgub we will use <b>N/A</b>. Once we gather the appropriate information we will use a C++ program, using OpenGL, to create an appropriate graph.
@@ -35,17 +36,13 @@ Conducted an experiment based on our research question:
 
 ### Milestone 3 - Data Collection and Experimentation (February 18)
 Continuing experiments based on our research question:
-* Performed data collection - Defined specific metrics that will help analyze our assertion
-* Analyzed the data collection to support/refute the assertion
+* Begin working on the deliverable to answer our project question
 * Refined our methodology
-Begin working on project deliverable for answeringthe project question.
+* Refining what resources/codebases we require
 
 ### Milestone 4 - Providing Deliverables (February 24)
 Provide deliverables for answering the project question.
 
 ## Current Issues
-N/A
-
-<b>Members</b>:
-Tyler Potter,
-Mitchell Rivett
+* What other open source code bases use Jira for their issue tracking?
+* How we can extract the initial commit on a feature, and the closing commit for a feature through Github?
