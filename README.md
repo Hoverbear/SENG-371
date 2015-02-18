@@ -4,10 +4,15 @@
 What is the relation between software development methodologies, and development time per feature (ie. patches) release in a software system?
 
 ## Methodology
-To find the development time per feature, we would use previously existing version tracking software to find the initial commits, to the final commit before patch release, or when its ready for testing. So using an average of common features used in software systems, we could find the approximate due date for each of the features. From here, we can take the element completion time(end day-start day)/estimated completion time(planned end day-start day) ratios for each element in the project, and visualize it.
+We will gather the information from the issue tracking software used by the selected codebases' (Jira and Github) by creating a Python script. For Jira issue tracking we will use JiraPython, and for Gitgub we will use <b>N/A</b>. Once we gather the appropriate information we will use a C++ program, using OpenGL, to create an appropriate graph.
+
+Our primary method for visualizing the information to answer our project question would be to store the information gathered from multiple different code bases and compare the code bases we collect. For every entered code base, you will have to input what software development method they used manually. From here, you can create a single average function release time vs time graph that will represent all the collected data for all different software development methods. Each project will be its own line on the graph, and eatch line will be colored according to its software development method. From here we should be able to view the differences for average feature completion time for each software development method.
+Another desired feature would be to take the average of all the graphs for each software development method and create another graph to represent it. This would be represented in the same color, but a differently formatted line (ie. dotted line). This could give us a more accurate view of the differences between the software development methods.
+
+If we have the time, we could also represent the information by taking the average feature completion time for the whole project(average of [end day-start day] for each feature)/average estimated completion time for the whole project(average of [planned end day-start day] for each feature) ratios for each project, and visualize it.
 
 ## Codebases/Systems/Metrics
-* <a href="https://github.com/okamstudio/godot">Godot</a> (N/A)
+* <a href="https://github.com/okamstudio/godot">Godot</a> (Open-source)
 * <a href="https://github.com/torvalds/linux">Linux</a> (<a href="http://www.linuxfoundation.org/what-is-linux">Open-source</a>)
 * <a href="https://github.com/SonarSource/sonarqube">SonarQube</a> (Open-source agile)
 * <a href="https://github.com/thinkaurelius/titan">Titan</a> (<a href="https://groups.google.com/forum/?utm_medium=email&utm_source=footer#!msg/aureliusgraphs/cIcJpwOnZMw/_Whhegn10t4J">Open-source agile</a>)
@@ -32,6 +37,7 @@ Conducted an experiment based on our research question:
 Continuing experiments based on our research question:
 * Performed data collection - Defined specific metrics that will help analyze our assertion
 * Analyzed the data collection to support/refute the assertion
+* Refined our methodology
 Begin working on project deliverable for answeringthe project question.
 
 ### Milestone 4 - Providing Deliverables (February 24)
