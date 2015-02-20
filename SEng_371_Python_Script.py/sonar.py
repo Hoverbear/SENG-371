@@ -3,24 +3,41 @@ from jira.client import JIRA
 from datetime import datetime
 from datetime import timedelta
 
+# Server hosting the Jira repo and the JQL search query
+server = 'https://jira.codehaus.org/'
+project = 'PROJECT = ' + raw_input("Enter a project: ").upper()
+filter_query_beg = ' AND issuetype = "New Feature" AND priority = Major AND status = Closed'
+
 
 def main():
     options = {
-        'server': 'https://jira.codehaus.org/'
+        'server': server
     }
     jira = JIRA(options)
 
-    features_in_proj = jira.search_issues('project = SONAR AND issuetype = "New Feature" AND status = Closed')
+    features_in_proj = jira.search_issues(project + filter_query_beg, maxResults=None)
 
+    # Store the issue information
     all_dates = []
     average_dates_per_feature = timedelta(0)
+    length = 0
+    bottom_limit = timedelta(0, 0, 0, 0, 30)
+    top_limit = timedelta(365)
+
+    print bottom_limit
+    print top_limit
 
     # Create a list of all difference in times and an average of all those times for each feature
     for issue in features_in_proj:
-        all_dates.append(get_date_difference(issue))
-        average_dates_per_feature += get_date_difference(issue)
+        current_datetime = get_date_difference(issue)
+        if current_datetime >= bottom_limit and current_datetime <= top_limit:
+            all_dates.append(current_datetime)
+            average_dates_per_feature += current_datetime
+            length += 1
+            print current_datetime
 
-    print average_dates_per_feature/len(features_in_proj)
+    print str(length) + " Out of: " + str(len(features_in_proj))
+    print average_dates_per_feature/length
 
 
 # Format Expected: 2014-04-22T05:06:50.714-0500
