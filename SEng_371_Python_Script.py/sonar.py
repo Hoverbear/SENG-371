@@ -1,6 +1,7 @@
 from jira.client import JIRA
 
 from datetime import datetime
+from datetime import timedelta
 
 
 def main():
@@ -9,17 +10,17 @@ def main():
     }
     jira = JIRA(options)
 
-    # Get all projects viewable by anonymous users.
-    projects = jira.projects()
+    features_in_proj = jira.search_issues('project = SONAR AND issuetype = "New Feature" AND status = Closed')
 
-    # Sort available project keys, then return the second, third, and fourth keys.
-    keys = sorted([project.key for project in projects])[2:5]
+    all_dates = []
+    average_dates_per_feature = timedelta(0)
 
-    # Get an issue.
-    issue = jira.issue('SONAR-5132')
+    # Create a list of all difference in times and an average of all those times for each feature
+    for issue in features_in_proj:
+        all_dates.append(get_date_difference(issue))
+        average_dates_per_feature += get_date_difference(issue)
 
-    # print issue.raw
-    get_date_difference(issue)
+    print average_dates_per_feature/len(features_in_proj)
 
 
 # Format Expected: 2014-04-22T05:06:50.714-0500
@@ -35,7 +36,7 @@ def get_date_difference(issue):
     start_date_time = datetime.strptime(start_date_string, date_format)
     end_date_time = datetime.strptime(end_date_string, date_format)
 
-    print end_date_time - start_date_time
+    return end_date_time - start_date_time
 
 
 if __name__ == '__main__':
