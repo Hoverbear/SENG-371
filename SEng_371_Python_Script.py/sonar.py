@@ -21,7 +21,9 @@ def main():
     all_dates = []
     average_dates_per_feature = timedelta(0)
     length = 0
-    bottom_limit = timedelta(0, 0, 0, 0, 30)
+
+    # create two date time events, one with 30 minutes and one with 1 year = 365 days
+    bottom_limit = timedelta(0, 0, 0, 0, 15)
     top_limit = timedelta(365)
 
     print bottom_limit
@@ -37,7 +39,7 @@ def main():
             print current_datetime
 
     print str(length) + " Out of: " + str(len(features_in_proj))
-    print average_dates_per_feature/length
+    print "Average development time" + average_dates_per_feature/length
 
 
 # Format Expected: 2014-04-22T05:06:50.714-0500
