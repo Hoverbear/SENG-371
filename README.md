@@ -20,10 +20,10 @@ Our primary method for visualizing the information will be to compare each of th
 * Take the average feature completion time for the whole project (average of [end day-start day] for each feature) and divide the average estimated completion time for the whole project (average of [planned end day-start day] for each feature) to get the feature completion time ratios for each project. This would be visualized using a 'completion time ratio vs project' bar graph. An additional graph could be provided to show the average feature completion time ratios of all the projects in the same software development methods, plotted with other development methods. This graph would be a 'completion time ratio vs software development method' bar graph.
 
 ## Codebases/Systems
-### Jira Issue Tracking
+### Jira
 * <a href="https://github.com/SonarSource/sonarqube">SonarQube</a> (Open-source agile)
 * <a href="https://github.com/micromata/projectforge-webapp">ProjectForge</a> (<a href="http://www.projectforge.org/">Open-source</a>)
-* <a href="https://github.com/thinkaurelius/titan">Titan</a> (<a href="https://groups.google.com/forum/?utm_medium=email&utm_source=footer#!msg/aureliusgraphs/cIcJpwOnZMw/_Whhegn10t4J">Open-source agile</a>)
+* <a href="https://github.com/apache/marmotta"></a>Marmotta</a> (Open-source agile)
 
 ### Other
 * <a href="https://github.com/okamstudio/godot">Godot</a> (Open-source)
