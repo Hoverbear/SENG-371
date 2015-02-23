@@ -4,18 +4,23 @@ from datetime import datetime
 from datetime import timedelta
 
 # Server hosting the Jira repo and the JQL search query
-server = 'https://jira.codehaus.org/'
-project = 'PROJECT = ' + raw_input("Enter a project: ").upper()
-filter_query_beg = ' AND issuetype = "New Feature" AND priority = Major AND status = Closed'
+server = 'https://issues.apache.org/jira/'
+
+project = raw_input("Enter a project: ").upper()
+filter_query = "project = " + project + ' AND issuetype = "New Feature" AND priority = Major AND status = Closed'
+# project = PF AND issuetype = "New Feature" AND priority = Major AND status = Closed ORDER BY summary ASC
+# project = AND issuetype = "New Feature" AND priority = Major AND status = Closed'
 
 
 def main():
+    print "Connecting to the server..."
+
     options = {
         'server': server
     }
     jira = JIRA(options)
 
-    features_in_proj = jira.search_issues(project + filter_query_beg, maxResults=None)
+    features_in_proj = jira.search_issues(filter_query, maxResults=None)
 
     # Store the issue information
     all_dates = []
@@ -23,7 +28,7 @@ def main():
     length = 0
 
     # create two date time events, one with 30 minutes and one with 1 year = 365 days
-    bottom_limit = timedelta(0, 0, 0, 0, 15)
+    bottom_limit = timedelta(0, 0, 0, 0, 30)
     top_limit = timedelta(365)
 
     print bottom_limit
@@ -39,7 +44,7 @@ def main():
             print current_datetime
 
     print str(length) + " Out of: " + str(len(features_in_proj))
-    print "Average development time" + average_dates_per_feature/length
+    print "Average development time " + str(average_dates_per_feature/length)
 
 
 # Format Expected: 2014-04-22T05:06:50.714-0500

@@ -56,6 +56,9 @@ Continuing experiments based on our research question:
 The following are directions on how to run the application in its current version:
 <ol>
 <li>Download 'SEng_371_Python_Script.py'.
+<li>Download the pip tool and install the <a href = "http://jira-python.readthedocs.org/en/latest/">Jira-python library </a>.
+<li>For python versions 2.7.9 and 3.40 use "python -m pip install jira".
+<li>For versions below, use the <a href="https://pip.pypa.io/en/latest/installing.html">pip support</a>.
 <li>Open command prompt.
 <li>Change directory to the downloaded location.
 <li>Type "python SEng_371_Python_Script.py PROJECT_NAME" and replace PROJECT_NAME with the project name as it is referred to as in the Jira database.
