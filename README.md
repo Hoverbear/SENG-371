@@ -21,9 +21,9 @@ Our primary method for visualizing the information will be to compare each of th
 
 ## Codebases/Systems
 ### Jira
-* <a href="https://github.com/SonarSource/sonarqube">SonarQube</a> (Open-source agile)
-* <a href="https://github.com/micromata/projectforge-webapp">ProjectForge</a> (<a href="http://www.projectforge.org/">Open-source</a>)
 * <a href="https://github.com/apache/marmotta">Marmotta</a> (Open-source agile)
+* * <a href="https://github.com/micromata/projectforge-webapp">ProjectForge</a> (<a href="http://www.projectforge.org/">Open-source</a>)
+* <a href="https://github.com/SonarSource/sonarqube">SonarQube</a> (Open-source agile)
 
 ### Other
 * <a href="https://github.com/okamstudio/godot">Godot</a> (Open-source)
